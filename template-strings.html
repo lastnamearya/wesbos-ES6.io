@@ -11,7 +11,8 @@
     const name = 'Snickers';
     const age = 2;
     const sentence = `My dog ${name} is ${age * 7} years old`;
-    console.log(sentence);
+    
+    // console.log(sentence);
 
     const person = {
       name: 'Wes',
@@ -51,9 +52,51 @@
       </ul>
     `;
 
-    document.body.innerHTML = markup2;
+    // document.body.innerHTML = markup2;
 
-    console.log(markup2);
+    // console.log(markup2);
+
+    const song = {
+      name: 'Dying to live',
+      artist: 'Tupac',
+      featuring: 'Biggie Smalls'
+    };
+
+    const markup3 = `
+      <div class"song">
+        <p>
+          ${song.name} - ${song.artist}
+          ${song.featuring ? `(Featuring ${song.featuring})` : ''}
+        </p>
+      </div>
+    `;
+
+    // document.body.innerHTML = markup3;
+
+    const beer = {
+      name: 'Belgian Wit',
+      brewery: 'Steam Whistle Brewery',
+      keywords: ['pale', 'cloudy', 'spiced', 'crisp']
+    };
+
+    function renderKeywords(keywords) {
+      return `
+        <ul>
+          ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    const markup4 = `
+      <div class="beer">
+        <h2>${beer.name}</h2>
+        <p class="brewery">${beer.brewery}</p>
+        ${renderKeywords(beer.keywords)}
+      </div>
+    `;    
+
+    document.body.innerHTML = markup4;
+
   </script> 
 </body>
 </html>
