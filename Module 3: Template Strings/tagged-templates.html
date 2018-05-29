@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tagged Templates</title>
+  <style>
+    .h1 {
+      background: #ffc600;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // ES6 Rest ... operator takes rest of the values arg1, arg2, ...argn
+    function highlight(strings, ...values) {
+      let str = '';
+      strings.forEach((string, i) => {
+        // str += string + (values[i] || ""); 
+        str += `${string} <span contenteditable class="h1">${values[i] || ""}</span>`;
+      });
+      return str;
+    }
+
+    const name = 'Snickers';     
+    const age = 100;
+    const gender = 'male';
+
+    const sentence = highlight`My dog's name is ${name} and he is ${age} years old ${gender}`;
+    console.log(sentence);
+
+    document.body.innerHTML = sentence;
+
+  </script>
+</body>
+</html>
