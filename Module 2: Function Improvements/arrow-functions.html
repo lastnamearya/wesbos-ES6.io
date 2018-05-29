@@ -8,42 +8,15 @@
 </head>
 <body>
   <script>
-    const names = ['wes', 'kait', 'lux'];
-
-    const fullNames = names.map(function(name) {
-      return `${name} bos`;
-    });
-
-    const fullNames2 = names.map((name) => {
-      return `${name} bos`;
-    });
-
-    // Single Parameter ~ Don't use parenthesis
-
-    const fullNames3 = names.map( name => {
-      return `${name} bos`;
-    });
-
-    // Implicit Return ~ remove return and delete curly braces
-
-    const fullNames4 = names.map( name => `${name} bos`);
-
-    // When no parameter
-
-    const fullNames5 = names.map(() => `cool bos`);
-
-    console.log(fullNames);
-    console.log(fullNames2);
-    console.log(fullNames3);
-    console.log(fullNames4);
-    console.log(fullNames5);
-
-    // Assign name to arrow functions (anonymous)
-
-    const sayMyName = (name) => { alert(`Hello ${name}!`) }
-
-    sayMyName('Wes');  
     
+    const race = '100m Dash';
+    const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+    // IN ES6 you can ~ race: race to just race
+    // Implicit Return ~ No Parenthesis --> then how to return an object, use bracket outside you return object
+
+    const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
+
   </script>
 </body>
 </html>
