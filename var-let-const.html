@@ -8,17 +8,17 @@
 </head>
 <body>
   <script>
-    const key = 'abc123';
-    let points = 50;
-    let winner = false;
-
-    const person = {
-      name: 'Wes',
-      age: 28
+    {
+      const name = 'wes'; 
+      console.log(name);
     }
 
-    const wes = Object.freeze(person);
-
+    for(let i = 0; i < 10; i++) {
+      console.log(i);
+      setTimeout(function() {
+        console.log('The number is ' + i);
+      }, 1000);
+    }
   </script>
 </body>
-</html>  
+</html>
